@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/galleryRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_photo" />
+
+    <ProgressBar xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/galleryProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/errorTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/retryButton"
+        android:layout_centerHorizontal="true"
+        android:text="Wyniki nie mogły być wczytane"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <com.google.android.material.button.MaterialButton xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/retryButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="PONÓW"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/noResultsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/retryButton"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:text="Brak wyników dla bieżącego wyszukiwania"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+</RelativeLayout>
