@@ -13,7 +13,7 @@ class UnsplashPagingSource(
 ) : PagingSource<Int, UnsplashPhoto>() {
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, UnsplashPhoto> {
         val position = params.key ?: UNSPLASH_STARTING_PAGE_INDEX
-        
+
         return try {
             val response = unsplashApi.searchPhotos(query, position, params.loadSize)
             val photos = response.results
