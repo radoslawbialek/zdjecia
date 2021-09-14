@@ -27,6 +27,10 @@ android {
         }
     }
 
+    buildFeatures{
+        viewBinding true
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -63,4 +67,8 @@ dependencies {
 
     // Paging 3
     implementation "androidx.paging:paging-runtime:$pagingVersion"
+}
+
+kapt {
+    correctErrorTypes true
 }
