@@ -5,8 +5,10 @@ import android.view.Menu
 import android.view.MenuInflater
 import android.view.View
 import androidx.appcompat.widget.SearchView
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.paging.LoadState
 import dagger.hilt.android.AndroidEntryPoint
 import pl.radoslawbialek.tutorial.obrazy.R
 import pl.radoslawbialek.tutorial.obrazy.databinding.FragmentGalleryBinding
@@ -21,7 +23,7 @@ class GalleryFragment : Fragment(R.layout.fragment_gallery) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        
+
         setHasOptionsMenu(true)
 
         _binding = FragmentGalleryBinding.bind(view)
@@ -29,15 +31,39 @@ class GalleryFragment : Fragment(R.layout.fragment_gallery) {
         val adapter = UnsplashPhotoAdapter()
 
         binding.apply {
-            galleryRecyclerView.setHasFixedSize(true)
-            galleryRecyclerView.adapter = adapter.withLoadStateHeaderAndFooter(
+            recyclerView.setHasFixedSize(true)
+            recyclerView.itemAnimator = null
+            recyclerView.adapter = adapter.withLoadStateHeaderAndFooter(
                 header = UnsplashPhotoLoadStateAdapter { adapter.retry() },
                 footer = UnsplashPhotoLoadStateAdapter { adapter.retry() },
             )
+
+            retryButton.setOnClickListener {
+                adapter.retry()
+            }
         }
 
         viewModel.photos.observe(viewLifecycleOwner) {
             adapter.submitData(viewLifecycleOwner.lifecycle, it)
+        }
+
+        adapter.addLoadStateListener { loadState ->
+            binding.apply {
+                progressBar.isVisible = loadState.source.refresh is LoadState.Loading
+                recyclerView.isVisible = loadState.source.refresh is LoadState.NotLoading
+                retryButton.isVisible = loadState.source.refresh is LoadState.Error
+                errorTextView.isVisible = loadState.source.refresh is LoadState.Error
+
+                if (loadState.source.refresh is LoadState.NotLoading
+                    && loadState.append.endOfPaginationReached
+                    && adapter.itemCount < 1
+                ) {
+                    recyclerView.isVisible = false
+                    emptyTextView.isVisible = true
+                } else {
+                    emptyTextView.isVisible = false
+                }
+            }
         }
     }
 
@@ -56,7 +82,7 @@ class GalleryFragment : Fragment(R.layout.fragment_gallery) {
 
             override fun onQueryTextSubmit(query: String?): Boolean {
                 if (query != null) {
-                    binding.galleryRecyclerView.scrollToPosition(0)
+                    binding.recyclerView.scrollToPosition(0)
                     viewModel.searchPhotos(query)
                     searchView.clearFocus()
                 }
