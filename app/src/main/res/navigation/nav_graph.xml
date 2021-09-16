@@ -7,7 +7,7 @@
     <fragment
         android:id="@+id/galleryFragment2"
         android:name="pl.radoslawbialek.tutorial.obrazy.ui.gallery.GalleryFragment"
-        android:label="Obrazy"
+        android:label="Zdjęcia"
         tools:layout="@layout/fragment_gallery">
         <action
             android:id="@+id/action_galleryFragment2_to_detailsFragment"
