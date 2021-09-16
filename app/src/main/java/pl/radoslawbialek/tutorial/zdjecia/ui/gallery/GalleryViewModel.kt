@@ -1,4 +1,4 @@
-package pl.radoslawbialek.tutorial.obrazy.ui.gallery
+package pl.radoslawbialek.tutorial.zdjecia.ui.gallery
 
 import androidx.hilt.Assisted
 import androidx.hilt.lifecycle.ViewModelInject
@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.switchMap
 import androidx.lifecycle.viewModelScope
 import androidx.paging.cachedIn
-import pl.radoslawbialek.tutorial.obrazy.data.UnsplashRepository
+import pl.radoslawbialek.tutorial.zdjecia.data.UnsplashRepository
 
 class GalleryViewModel @ViewModelInject constructor(
     private val repository: UnsplashRepository,

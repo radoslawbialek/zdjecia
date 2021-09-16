@@ -1,4 +1,4 @@
-package pl.radoslawbialek.tutorial.obrazy
+package pl.radoslawbialek.tutorial.zdjecia
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

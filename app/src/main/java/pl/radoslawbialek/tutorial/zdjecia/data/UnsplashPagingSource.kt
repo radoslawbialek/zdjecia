@@ -1,7 +1,7 @@
-package pl.radoslawbialek.tutorial.obrazy.data
+package pl.radoslawbialek.tutorial.zdjecia.data
 
 import androidx.paging.PagingSource
-import pl.radoslawbialek.tutorial.obrazy.api.UnsplashApi
+import pl.radoslawbialek.tutorial.zdjecia.api.UnsplashApi
 import retrofit2.HttpException
 import java.io.IOException
 

@@ -1,9 +1,9 @@
-package pl.radoslawbialek.tutorial.obrazy.data
+package pl.radoslawbialek.tutorial.zdjecia.data
 
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.liveData
-import pl.radoslawbialek.tutorial.obrazy.api.UnsplashApi
+import pl.radoslawbialek.tutorial.zdjecia.api.UnsplashApi
 import javax.inject.Inject
 import javax.inject.Singleton
 

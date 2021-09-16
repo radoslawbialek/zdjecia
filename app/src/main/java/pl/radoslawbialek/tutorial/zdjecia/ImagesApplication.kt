@@ -1,4 +1,4 @@
-package pl.radoslawbialek.tutorial.obrazy
+package pl.radoslawbialek.tutorial.zdjecia
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

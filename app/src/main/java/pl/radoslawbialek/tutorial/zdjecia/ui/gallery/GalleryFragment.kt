@@ -1,4 +1,4 @@
-package pl.radoslawbialek.tutorial.obrazy.ui.gallery
+package pl.radoslawbialek.tutorial.zdjecia.ui.gallery
 
 import android.os.Bundle
 import android.view.Menu
@@ -11,9 +11,9 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.paging.LoadState
 import dagger.hilt.android.AndroidEntryPoint
-import pl.radoslawbialek.tutorial.obrazy.R
-import pl.radoslawbialek.tutorial.obrazy.data.UnsplashPhoto
-import pl.radoslawbialek.tutorial.obrazy.databinding.FragmentGalleryBinding
+import pl.radoslawbialek.tutorial.zdjecia.R
+import pl.radoslawbialek.tutorial.zdjecia.data.UnsplashPhoto
+import pl.radoslawbialek.tutorial.zdjecia.databinding.FragmentGalleryBinding
 
 @AndroidEntryPoint
 class GalleryFragment : Fragment(R.layout.fragment_gallery), UnsplashPhotoAdapter.OnItemClickListener {

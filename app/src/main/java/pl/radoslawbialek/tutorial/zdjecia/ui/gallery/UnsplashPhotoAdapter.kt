@@ -1,4 +1,4 @@
-package pl.radoslawbialek.tutorial.obrazy.ui.gallery
+package pl.radoslawbialek.tutorial.zdjecia.ui.gallery
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -7,9 +7,9 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
-import pl.radoslawbialek.tutorial.obrazy.R
-import pl.radoslawbialek.tutorial.obrazy.data.UnsplashPhoto
-import pl.radoslawbialek.tutorial.obrazy.databinding.ItemPhotoBinding
+import pl.radoslawbialek.tutorial.zdjecia.R
+import pl.radoslawbialek.tutorial.zdjecia.data.UnsplashPhoto
+import pl.radoslawbialek.tutorial.zdjecia.databinding.ItemPhotoBinding
 
 class UnsplashPhotoAdapter(private val listener: OnItemClickListener) :
     PagingDataAdapter<UnsplashPhoto, UnsplashPhotoAdapter.PhotoViewHolder>(PHOTO_COMPARATOR) {

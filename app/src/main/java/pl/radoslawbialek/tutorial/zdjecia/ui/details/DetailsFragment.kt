@@ -1,4 +1,4 @@
-package pl.radoslawbialek.tutorial.obrazy.ui.details
+package pl.radoslawbialek.tutorial.zdjecia.ui.details
 
 import android.content.Intent
 import android.graphics.drawable.Drawable
@@ -13,8 +13,8 @@ import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
-import pl.radoslawbialek.tutorial.obrazy.R
-import pl.radoslawbialek.tutorial.obrazy.databinding.FragmentDetailsBinding
+import pl.radoslawbialek.tutorial.zdjecia.R
+import pl.radoslawbialek.tutorial.zdjecia.databinding.FragmentDetailsBinding
 
 class DetailsFragment : Fragment(R.layout.fragment_details) {
 

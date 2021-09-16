@@ -1,4 +1,4 @@
-package pl.radoslawbialek.tutorial.obrazy.ui.gallery
+package pl.radoslawbialek.tutorial.zdjecia.ui.gallery
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,7 +6,7 @@ import androidx.core.view.isVisible
 import androidx.paging.LoadState
 import androidx.paging.LoadStateAdapter
 import androidx.recyclerview.widget.RecyclerView
-import pl.radoslawbialek.tutorial.obrazy.databinding.UnsplashPhotoLoadStateFooterBinding
+import pl.radoslawbialek.tutorial.zdjecia.databinding.UnsplashPhotoLoadStateFooterBinding
 
 class UnsplashPhotoLoadStateAdapter(private val retry: () -> Unit) :
     LoadStateAdapter<UnsplashPhotoLoadStateAdapter.LoadStateViewHolder>() {

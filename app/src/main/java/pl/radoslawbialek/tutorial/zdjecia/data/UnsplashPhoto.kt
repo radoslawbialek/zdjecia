@@ -1,4 +1,4 @@
-package pl.radoslawbialek.tutorial.obrazy.data
+package pl.radoslawbialek.tutorial.zdjecia.data
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize

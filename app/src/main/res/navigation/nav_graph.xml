@@ -6,7 +6,7 @@
     app:startDestination="@id/galleryFragment2">
     <fragment
         android:id="@+id/galleryFragment2"
-        android:name="pl.radoslawbialek.tutorial.obrazy.ui.gallery.GalleryFragment"
+        android:name="pl.radoslawbialek.tutorial.zdjecia.ui.gallery.GalleryFragment"
         android:label="Zdjęcia"
         tools:layout="@layout/fragment_gallery">
         <action
@@ -15,11 +15,11 @@
     </fragment>
     <fragment
         android:id="@+id/detailsFragment"
-        android:name="pl.radoslawbialek.tutorial.obrazy.ui.details.DetailsFragment"
+        android:name="pl.radoslawbialek.tutorial.zdjecia.ui.details.DetailsFragment"
         android:label="Zdjęcie"
         tools:layout="@layout/fragment_details">
         <argument
             android:name="photo"
-            app:argType="pl.radoslawbialek.tutorial.obrazy.data.UnsplashPhoto" />
+            app:argType="pl.radoslawbialek.tutorial.zdjecia.data.UnsplashPhoto" />
     </fragment>
 </navigation>

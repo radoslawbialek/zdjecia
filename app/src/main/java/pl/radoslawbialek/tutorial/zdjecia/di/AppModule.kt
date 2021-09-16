@@ -1,10 +1,10 @@
-package pl.radoslawbialek.tutorial.obrazy.di
+package pl.radoslawbialek.tutorial.zdjecia.di
 
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ApplicationComponent
-import pl.radoslawbialek.tutorial.obrazy.api.UnsplashApi
+import pl.radoslawbialek.tutorial.zdjecia.api.UnsplashApi
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton

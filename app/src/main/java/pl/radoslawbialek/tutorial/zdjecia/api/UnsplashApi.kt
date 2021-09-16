@@ -1,6 +1,6 @@
-package pl.radoslawbialek.tutorial.obrazy.api
+package pl.radoslawbialek.tutorial.zdjecia.api
 
-import pl.radoslawbialek.tutorial.obrazy.BuildConfig
+import pl.radoslawbialek.tutorial.zdjecia.BuildConfig
 import retrofit2.http.GET
 import retrofit2.http.Headers
 import retrofit2.http.Query
