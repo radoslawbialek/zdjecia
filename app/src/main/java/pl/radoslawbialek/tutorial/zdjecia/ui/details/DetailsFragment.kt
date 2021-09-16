@@ -50,7 +50,7 @@ class DetailsFragment : Fragment(R.layout.fragment_details) {
                         isFirstResource: Boolean
                     ): Boolean {
                         progressBar.isVisible = false
-                        creatorTextView.isVisible = true
+                        authorButton.isVisible = true
                         descriptionTextView.isVisible = photo.description != null
                         return false
                     }
@@ -62,12 +62,11 @@ class DetailsFragment : Fragment(R.layout.fragment_details) {
             val uri = Uri.parse(photo.user.attributionUrl)
             val intent = Intent(Intent.ACTION_VIEW, uri)
 
-            creatorTextView.apply {
-                text = "Zdjęcie autorstwa ${photo.user.name} @ Unsplash"
+            authorButton.apply {
+                text = "Autor: ${photo.user.name} @ Unsplash"
                 setOnClickListener {
                     context.startActivity(intent)
                 }
-                paint.isUnderlineText = true
             }
         }
     }

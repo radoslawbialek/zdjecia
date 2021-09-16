@@ -25,6 +25,6 @@ data class UnsplashPhoto(
         val name: String,
         val username: String
     ) : Parcelable {
-        val attributionUrl get() = "https://unsplash.com/$username?utm_source=obrazy&utm_medium=referral"
+        val attributionUrl get() = "https://unsplash.com/$username?utm_source=zdjecia&utm_medium=referral"
     }
 }
